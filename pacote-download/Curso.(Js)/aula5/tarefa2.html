@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar Nome</title>
+</head>
+<body>
+
+    <h1>Digite o seu nome</h1>
+
+    <input type="text" id="nome" placeholder="Digite o nome">
+
+    <button onclick="verificarNome()">Verificar</button>
+
+    <div id="nomeDigitado"></div>
+    
+
+    <script>
+        function verificarNome() {
+
+            var nome = document.getElementById("nome").value;
+            var nomeDigitado = document.querySelector('div#nomeDigitado')
+            var pegar = String(nome.value)
+
+            
+
+            // Verifica se o nome está correto
+            if (nome.toLowerCase() === "brasileiro") {
+                  nomeDigitado.innerHTML = `<p> vc é <strong>${pegar}</strong> </p>`  
+                
+
+            } else {
+                nomeDigitado.innerHTML = '<p> vc é <strong>estrangeiro</strong> </p>'
+                
+
+            }
+        }
+    </script>
+
+</body>
+</html>
